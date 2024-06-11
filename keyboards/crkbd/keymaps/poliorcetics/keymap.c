@@ -45,7 +45,6 @@
 /// Layer-tap switch
 /// <https://docs.qmk.fm/#/keycodes?id=layer-switching>
 #define L(num, kc) LT(num, KC_ ## kc)
-#define TOGG_L(num) LT(num, CW_TOGG)
 
 /// General changes from the base Miryoku layout:
 ///
@@ -69,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,                   KC_J,         KC_L,         KC_U,         KC_Y,      KC_QUOT,
        LS(A),        LC(R),       ALT(S),        LG(T),         KC_G,                   KC_M,        RG(N),       ALT(E),        RC(I),        RS(O),
         KC_Z,         KC_X,       AGR(C),         KC_D,         KC_V,                   KC_K,         KC_H,    AGR(COMM),       KC_DOT,      KC_SLSH,
-                               L(1, ESC),    L(2, SPC),       KC_TAB,             L(3, BSPC),    L(4, ENT),    TOGG_L(5)
+                               L(1, ESC),    L(2, SPC),       KC_TAB,             L(3, BSPC),    L(4, ENT),    L(5, ESC)
     ),
 
     /// RIGHT HAND LAYERS
@@ -171,4 +170,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #undef __
 
 #undef L
-#undef TOGG_L

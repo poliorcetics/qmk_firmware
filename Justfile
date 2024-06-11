@@ -21,7 +21,5 @@ _compile new old: (_side new old)
     mv crkbd_rev1_poliorcetics_promicro_rp2040.uf2 {{ target }}/{{ new }}.uf2
 
 _side new old:
-    sd -p '^// (#define MASTER_{{ new }})$' '$1' {{ config }}
     sd '^// (#define MASTER_{{ new }})$' '$1' {{ config }}
-    sd -p '^(#define MASTER_{{ old }})$' '// $1' {{ config }}
     sd '^(#define MASTER_{{ old }})$' '// $1' {{ config }}
